@@ -9,7 +9,13 @@
 import UIKit
 
 class DropDownMenuPresentationAnimator: NSObject {
+  private let duration: NSTimeInterval
   var snapshot: UIView?
+
+  init(duration: NSTimeInterval) {
+    self.duration = duration
+    super.init()
+  }
 }
 
 // MARK: - UIViewControllerAnimatedTransitioning
@@ -17,7 +23,7 @@ extension DropDownMenuPresentationAnimator: UIViewControllerAnimatedTransitionin
   func transitionDuration(transitionContext: UIViewControllerContextTransitioning?)
     -> NSTimeInterval {
 
-      return 0.5
+      return self.duration
   }
 
   func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
@@ -37,7 +43,7 @@ extension DropDownMenuPresentationAnimator: UIViewControllerAnimatedTransitionin
     to.userInteractionEnabled = true
 
     UIView.animateWithDuration(
-      0.5,
+      self.duration,
       delay: 0.0,
       usingSpringWithDamping: 0.9,
       initialSpringVelocity: 0.3,

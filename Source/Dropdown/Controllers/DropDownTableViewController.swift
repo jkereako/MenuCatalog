@@ -16,7 +16,6 @@ class DropDownTableViewController: UITableViewController {
 
     // Remove "Back"
     navigationController!.navigationBar.topItem?.title = ""
-    title = "asdf"
   }
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(true)
@@ -47,7 +46,7 @@ extension DropDownTableViewController: UIViewControllerTransitioningDelegate {
     presented: UIViewController, presentingController presenting: UIViewController,
     sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
 
-    presentationAnimator = DropDownMenuPresentationAnimator()
+    presentationAnimator = DropDownMenuPresentationAnimator(duration: 0.5)
 
     return presentationAnimator
   }
@@ -58,6 +57,6 @@ extension DropDownTableViewController: UIViewControllerTransitioningDelegate {
       fatalError("Snapshot is nil")
     }
 
-    return DropDownMenuDismissalAnimator(snapshot: snapshot)
+    return DropDownMenuDismissalAnimator(duration: 0.5, snapshot: snapshot)
   }
 }

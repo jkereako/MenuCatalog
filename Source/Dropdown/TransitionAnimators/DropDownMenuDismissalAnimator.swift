@@ -9,9 +9,11 @@
 import UIKit
 
 class DropDownMenuDismissalAnimator: NSObject {
-  let snapshot: UIView
+  private let duration: NSTimeInterval
+  private let snapshot: UIView
 
-  init(snapshot: UIView) {
+  init(duration: NSTimeInterval, snapshot: UIView) {
+    self.duration = duration
     self.snapshot = snapshot
     super.init()
   }
@@ -22,7 +24,7 @@ extension DropDownMenuDismissalAnimator: UIViewControllerAnimatedTransitioning {
   func transitionDuration(transitionContext: UIViewControllerContextTransitioning?)
     -> NSTimeInterval {
 
-      return 0.5
+      return self.duration
   }
 
   func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
@@ -35,7 +37,7 @@ extension DropDownMenuDismissalAnimator: UIViewControllerAnimatedTransitioning {
     to.userInteractionEnabled = true
 
     UIView.animateWithDuration(
-      0.5,
+      self.duration,
       delay: 0.0,
       usingSpringWithDamping: 0.9,
       initialSpringVelocity: 0.3,
