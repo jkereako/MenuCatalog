@@ -8,16 +8,16 @@
         <!--Main menu-->
         <scene sceneID="pbZ-fa-Kgq">
             <objects>
-                <tableViewController storyboardIdentifier="mainMenu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="a5J-At-xoP" userLabel="Main menu" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="mainMenu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="a5J-At-xoP" userLabel="Main menu" customClass="MainMenuTableViewController" customModule="MenuCatalog" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="54" sectionHeaderHeight="28" sectionFooterHeight="28" id="96A-cF-pm0">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
                             <tableViewSection id="QHh-V0-5r3">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="dropDown" textLabel="wJB-os-6fB" detailTextLabel="Nhb-s3-nzU" style="IBUITableViewCellStyleSubtitle" id="e8w-eV-Mln" userLabel="Drop down">
-                                        <rect key="frame" x="0.0" y="64" width="600" height="54"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e8w-eV-Mln" id="HAX-Qg-Ufk">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="53.5"/>
@@ -51,7 +51,7 @@
                             <outlet property="delegate" destination="a5J-At-xoP" id="HmH-kq-XrT"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="6cn-RW-lyC"/>
+                    <navigationItem key="navigationItem" title="Menu catalog" id="6cn-RW-lyC"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Abz-gl-Pyj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -69,9 +69,10 @@
         <scene sceneID="qpN-Kq-9uN">
             <objects>
                 <navigationController storyboardIdentifier="navigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ett-wv-dTi" userLabel="Navigation" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dSm-0I-1Ix">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="dSm-0I-1Ix">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="a5J-At-xoP" kind="relationship" relationship="rootViewController" id="i9s-TZ-vkb"/>

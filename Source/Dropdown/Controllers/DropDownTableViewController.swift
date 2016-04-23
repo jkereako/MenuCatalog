@@ -11,6 +11,27 @@ import UIKit
 class DropDownTableViewController: UITableViewController {
   private var presentationAnimator: DropDownMenuPresentationAnimator?
 
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    // Remove "Back"
+    navigationController!.navigationBar.topItem?.title = ""
+    title = "asdf"
+  }
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(true)
+
+    transitionCoordinator()?.animateAlongsideTransition(
+      { [unowned self] (context: UIViewControllerTransitionCoordinatorContext) in
+        let navBar = self.navigationController!.navigationBar
+
+        navBar.tintColor = UIColor.whiteColor()
+        navBar.barTintColor = UIColor.blackColor()
+      },
+      completion: nil
+    )
+  }
+
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     guard let destination = segue.destinationViewController as? DropDownMenuTableViewController else
     {

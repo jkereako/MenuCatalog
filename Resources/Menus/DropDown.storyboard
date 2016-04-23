@@ -8,8 +8,8 @@
         <!--Menu-->
         <scene sceneID="Isy-pu-AzL">
             <objects>
-                <tableViewController storyboardIdentifier="dropDownMenu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Tey-ma-qKU" userLabel="Menu" customClass="DropDownMenuTableViewController" customModule="Menus" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="T0I-Jc-kNb">
+                <tableViewController storyboardIdentifier="dropDownMenu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Tey-ma-qKU" userLabel="Menu" customClass="DropDownMenuTableViewController" customModule="MenuCatalog" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="T0I-Jc-kNb">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
@@ -127,7 +127,7 @@
         <!--Drop down-->
         <scene sceneID="XOa-tZ-MkT">
             <objects>
-                <tableViewController storyboardIdentifier="dropDown" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3WX-kC-52d" userLabel="Drop down" customClass="DropDownTableViewController" customModule="Menus" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="dropDown" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3WX-kC-52d" userLabel="Drop down" customClass="DropDownTableViewController" customModule="MenuCatalog" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZSf-g0-Q3a">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
