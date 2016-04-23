@@ -9,4 +9,7 @@
 import UIKit
 
 class DropDownMenuTableViewController: UITableViewController {
+  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    dismissViewControllerAnimated(true, completion: nil)
+  }
 }
